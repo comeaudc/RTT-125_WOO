@@ -1,0 +1,99 @@
+body{
+    height: 100%;
+    font-family: 'Creepster', system-ui;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    color: rgb(201, 17, 17);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 3.5rem;
+    padding-bottom: 0;
+    margin-top: .5em;
+    margin-bottom: 0;
+    transform: scale(1);
+    transition: 3s ease-in-out ;
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -ms-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    transition: all 3s ease-in-out;
+}
+
+.active{
+    transform: scale(1.2);
+}
+
+iframe{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('flames.jpg');
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -2;
+  }
+  
+  /* Now the same background, but with brightness filters*/
+  .lightning{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('flames.jpg');
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+    z-index: -1;
+  }
+  
+  /*Now just a opacity animation*/
+  .flashit{
+  -webkit-animation: flash ease-out 7s infinite;
+  -moz-animation: flash ease-out 7s infinite;
+  animation: flash ease-out 7s infinite;
+  animation-delay: 2s;
+  }
+  
+  @-webkit-keyframes flash {
+      from { opacity: 0; } 
+    92% { opacity: 0; }
+      93% { opacity: 0.6; }
+    94% { opacity: 0.2; }
+    96% { opacity: 0.9; } 
+      to { opacity: 0; }
+  }
+  
+  @keyframes flash {
+      from { opacity: 0; } 
+      92% { opacity: 0; }
+      93% { opacity: 0.6; }
+      94% { opacity: 0.2; }
+      96% { opacity: 1; } 
+      to { opacity: 0; }
+  }
